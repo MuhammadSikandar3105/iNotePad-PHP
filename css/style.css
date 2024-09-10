@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+/* variables define */
+:root {
+    --primary-color: #3d5e71;
+    --secondry-color: #4a1520;
+    --third-color: #2b3035;
+    --white-color: #fff;
+    --text-color: #555;
+    --text-gray: #999;
+    --black-color: #000;
+    --primary-font: 'Roboto', sans-serif;
+    --secondry-font: 'Quicksand', sans-serif;
+    --light-bg: #fff;
+    --light-text: #000;
+    --light-border: #ccc;
+    --dark-bg: #121212;
+    --dark-text: #fff;
+    --dark-border: #333;
+    --dark-card-bg: #2c2c2c;
+    --dark-card-border: #444;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card-text {
+    width: 16.9rem;
+    height: 14rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 0.425rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--third-color);
+}
+
+/* Light Mode (default) */
+body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+.form-control.light-mode,
+#title.light-mode,
+#description.light-mode,
+#tag.light-mode {
+    border: 1px solid var(--light-border);
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+.card.light-mode {
+    background-color: var(--light-bg);
+    border-color: var(--light-border);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+#title.dark-mode,
+#description.dark-mode,
+#tag.dark-mode,
+.form-control.dark-mode {
+    background-color: var(--third-color);
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text);
+}
+
+.card.dark-mode {
+    background-color: var(--dark-card-bg);
+    border-color: var(--dark-card-border);
+    color: var(--white-color);
+}
+
+.btn-dark-mode {
+    background-color: var(--third-color);
+    color: var(--dark-text);
+}
