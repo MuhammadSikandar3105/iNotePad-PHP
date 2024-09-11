@@ -8,8 +8,11 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 
 }
-if (!isset($_SESSION['theme'])) {
-    $_SESSION['theme'] = 'light';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['theme'])) {
+        $_SESSION['theme'] = $_POST['theme'];
+        echo $_SESSION['theme']; 
+    }
 }
 ?>
 
@@ -35,7 +38,7 @@ if (!isset($_SESSION['theme'])) {
     <title>iNotePad</title>
 </head>
 
-<body class="<?php echo isset($_SESSION['theme']) && $_SESSION['theme'] == 'dark-mode' ? 'dark' : 'light-mode'; ?>" >
+<body id="body" class="body <?php echo isset($_SESSION['theme']) && $_SESSION['theme'] == 'light' ? 'light-mode' : 'dark-mode'; ?>">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container">
