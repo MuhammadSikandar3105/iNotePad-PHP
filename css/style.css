@@ -51,7 +51,7 @@ html {
 }
 
 /* Light Mode (default) */
-.body.light-mode {
+body.light-mode {
     background-color: var(--light-bg);
     color: var(--light-text);
 }
@@ -71,7 +71,7 @@ html {
 }
 
 /* Dark Mode */
-.body.dark-mode {
+body.dark-mode {
     background-color: var(--dark-bg) !important;
     color: var(--dark-text) !important;
 }
@@ -91,7 +91,3 @@ html {
     color: var(--white-color);
 }
 
-.btn-dark-mode {
-    background-color: var(--third-color);
-    color: var(--dark-text);
-}
