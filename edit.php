@@ -54,7 +54,7 @@ $stmt->close();
 
             <div class="mb-3">
                 <label for="tag" class="form-label">Tag</label>
-                <input type="text" class="form-control" name="tag" value="<?php echo htmlspecialchars($note['tag']); ?>" required>
+                <input type="text" class="form-control" name="tag" value="<?php echo htmlspecialchars($note['tag']); ?>" minlength="6" maxlength="35" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Update Note</button>

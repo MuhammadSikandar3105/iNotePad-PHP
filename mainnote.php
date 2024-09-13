@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>iNotePad</title>
+    <title>iNotePad - Your Notes Are Secure</title>
 </head>
 
 <body
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="mb-3">
                     <label for="tag" class="form-label">Tag</label>
-                    <input type="text" name="tag" class="form-control" id="tag">
+                    <input type="text" name="tag" class="form-control" id="tag" minlength="6" maxlength="35">
                 </div>
                 <button type="submit" class="btn btn-primary">Add Note</button>
             </form>
