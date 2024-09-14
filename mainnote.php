@@ -39,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
     <title>iNotePad - Your Notes Are Secure</title>
 </head>
 
@@ -57,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="notes.php">Home</a>
+                        <a class="nav-link active" aria-current="page" href="mainnote.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
@@ -93,17 +92,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h3>Add Your Notes</h3>
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
-                    <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp"
+                    <input type="text" class="form-control <?php echo isset($_SESSION['theme']) && $_SESSION['theme'] == 'light' ? 'light-mode' : 'dark-mode'; ?>" name="title" id="title" aria-describedby="emailHelp"
                         required>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="description form-control" name="description" id="description" rows="6" cols="90"
+                    <textarea class="description form-control <?php echo isset($_SESSION['theme']) && $_SESSION['theme'] == 'light' ? 'light-mode' : 'dark-mode'; ?>" name="description" id="description" rows="6" cols="90"
                         required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="tag" class="form-label">Tag</label>
-                    <input type="text" name="tag" class="form-control" id="tag" minlength="6" maxlength="35">
+                    <input type="text" name="tag" class="form-control <?php echo isset($_SESSION['theme']) && $_SESSION['theme'] == 'light' ? 'light-mode' : 'dark-mode'; ?>" id="tag" minlength="6" maxlength="35">
                 </div>
                 <button type="submit" class="btn btn-primary">Add Note</button>
             </form>
