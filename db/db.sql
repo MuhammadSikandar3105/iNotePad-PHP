@@ -1,5 +1,5 @@
 -- create database
-create database     ;
+create database inotebook;
 
 use inotebook;
 

@@ -88,6 +88,7 @@ body.dark-mode {
 .card.dark-mode {
     background-color: var(--dark-card-bg);
     border-color: var(--dark-card-border);
+    color: white !important;
 }
 
 /* login form */
